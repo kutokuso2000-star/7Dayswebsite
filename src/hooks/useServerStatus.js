@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const SERVER_ID = "35841046"; // ✅ Deine BattleMetrics ID
+const SERVER_ID = "35841046"; // ✅ Dein echter BattleMetrics Server
 
 export default function useServerStatus(interval = 8000) {
   const [data, setData] = useState({
@@ -13,24 +13,23 @@ export default function useServerStatus(interval = 8000) {
   useEffect(() => {
     const fetchStatus = async () => {
       try {
-        const res = await fetch(`https://api.battlemetrics.com/servers/${SERVER_ID}`);
+        const url = `https://api.allorigins.win/raw?url=${encodeURIComponent(
+          `https://api.battlemetrics.com/servers/${SERVER_ID}`
+        )}`;
+
+        const res = await fetch(url);
         const json = await res.json();
 
         const server = json.data;
 
-        if (!server) {
-          setData({ online: false, players: 0, maxPlayers: 0, ping: 0 });
-          return;
-        }
-
         setData({
           online: server.attributes.status === "online",
-          players: server.attributes.players,
-          maxPlayers: server.attributes.maxPlayers,
-          ping: server.attributes.details?.rust_queued_players ?? 0, // 7DTD hat kein normales Ping-Field
+          players: server.attributes.players || 0,
+          maxPlayers: server.attributes.maxPlayers || 0,
+          ping: server.attributes.details?.uptime || 0
         });
 
-      } catch (e) {
+      } catch {
         setData({ online: false, players: 0, maxPlayers: 0, ping: 0 });
       }
     };
