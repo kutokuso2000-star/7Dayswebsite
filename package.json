@@ -6,10 +6,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
-	"engines": {
-  "node": "18.x"
-}
-
+  },
+  "engines": {
+    "node": "18.x"
   },
   "dependencies": {
     "react": "^18.2.0",
