@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 
-const SERVER_ID = "35841046"; // ✅ Dein echter BattleMetrics Server
+const SERVER_ID = "35841046"; // ✅ Deine BattleMetrics Server ID
 
 export default function useServerStatus(interval = 8000) {
   const [data, setData] = useState({
@@ -19,7 +19,6 @@ export default function useServerStatus(interval = 8000) {
 
         const res = await fetch(url);
         const json = await res.json();
-
         const server = json.data;
 
         setData({

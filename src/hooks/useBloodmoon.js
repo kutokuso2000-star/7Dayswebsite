@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 
 const BLOOD_INTERVAL = 7;
 const HORDE_HOUR = 22;

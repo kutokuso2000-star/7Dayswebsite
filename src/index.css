@@ -1,13 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABn0lEQVR4nLWSP0gUYRzHv5vZneT
-kbJvZWSwtpAl4F2rJtQNgpKUkSKdNpRbTUNSdtQeKSQtKbQlBo1ttKSk1kCQ1C0mZJbsrGwu7Gxxm+XnYY
-N7O7Lhzzvvc853znPOc8pTTJYFFZyFJ54RiVn5N3Tq9557XUyOQTHxgWmA7C5sGm4GQc4TaDf6JMlYQbhb
-vsqCjPjfPh4Lz+XkS1z4YxjeViEm3LbCDYW97WgEbJmW+fxnMGBbA54A9+3p6+tP7ih2uL2s8z3m2AD1KS
-Kmsvn0mksjnHfD7CjFWNMwZ9Mv7Th2W2nYfq8wrrclHmg7eSSNrs2JsSPy4o8ZnGHUX8nuPJnrv5DLx3Dw
-wO8NDKZYFkY2gPtjpOHnkJkbDVFrG+LFwzSmw7d+FFsPLf92PZx81wF9dkr2OgaVnuhbJFGmC2I8PXM3ch
-adLKjWInzu3E4MchDuXqdndDP9Ssy9Z0SkunTAm4EZIx8dCVZX3AoSd5QnK9Lyqd0+8I8HgBp0hB0txSwv
-fHwOZ8+2u+ZqbVj6pNzPIi4CFMrQ66E6zvgAAAABJRU5ErkJggg==") 16 16, crosshair;
-}
